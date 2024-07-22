@@ -9,6 +9,9 @@ jobs:
 
     runs-on: windows-latest
 
+    outputs:
+      PowerToys_Version: ${{steps.version.outputs.PowerToys_Version}}
+
     strategy:
       matrix:
         platform: [x64, ARM64]
@@ -24,8 +27,9 @@ jobs:
     - name: Set version
       run: echo ("PowerToys_Version=" + (git describe --abbrev=0 --tags).substring(1)) >> $env:GITHUB_ENV
 
-    - name: Version
-      run: echo "${{env.PowerToys_Version}}"
+    - name: Output version
+      id: version
+      run: echo "PowerToys_Version=${{env.PowerToys_Version}}" >> "$env:GITHUB_OUTPUT"
 
     - name: Setup dotnet
       uses: actions/setup-dotnet@v4
@@ -54,11 +58,14 @@ jobs:
 
   push:
 
-    needs: build
-
     runs-on: windows-latest
 
+    needs: build
+
     steps:
+
+    - name: Version
+      run: echo "${{needs.build.outputs.PowerToys_Version}}"
 
     - name: Checkout
       uses: actions/checkout@v4
@@ -82,7 +89,7 @@ jobs:
         dotnet-version: 8.0.x
 
     - name: Pack
-      run: dotnet build main -c Release /p:Version=${{env.PowerToys_Version}}
+      run: dotnet build main -c Release /p:Version=${{needs.build.outputs.PowerToys_Version}}
 
     - name: NuGet Push
       run: dotnet nuget push main\bin\Release\*.nupkg --api-key "${{secrets.NUGET_APIKEY}}" --source https://api.nuget.org/v3/index.json --skip-duplicate
