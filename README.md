@@ -62,3 +62,9 @@ Example of a `.csproj` file:
 
 </Project>
 ```
+
+## Disclaimer
+
+This is not an official Microsoft PowerToys package.
+
+The DLLs are built from [source](https://github.com/microsoft/PowerToys) and pushed to [NuGet](https://www.nuget.org/packages/Community.PowerToys.Run.Plugins.Dependencies) with a GitHub Actions [workflow](https://github.com/hlaueriksson/Community.PowerToys.Run.Plugins.Dependencies/actions/workflows/package.yml).

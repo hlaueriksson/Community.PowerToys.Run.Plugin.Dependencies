@@ -15,20 +15,14 @@ jobs:
 
     steps:
 
-    - name: Checkout
-      uses: actions/checkout@v4
-      with:
-        path: main
-
     - name: Checkout PowerToys
       uses: actions/checkout@v4
       with:
         repository: microsoft/PowerToys
-        path: PowerToys
         fetch-depth: 0
 
     - name: Set version
-      run: echo ("PowerToys_Version=" + (git -C PowerToys describe --abbrev=0 --tags).substring(1)) >> $env:GITHUB_ENV
+      run: echo ("PowerToys_Version=" + (git describe --abbrev=0 --tags).substring(1)) >> $env:GITHUB_ENV
 
     - name: Version
       run: echo "${{env.PowerToys_Version}}"
@@ -42,19 +36,53 @@ jobs:
       uses: microsoft/setup-msbuild@v2
 
     - name: Restore dependencies
-      run: nuget restore PowerToys\PowerToys.sln
+      run: nuget restore PowerToys.sln
 
     - name: Build version
-      run: msbuild PowerToys\src\common\version\
+      run: msbuild src\common\version\
 
     - name: Restore dependencies
-      run: msbuild PowerToys\src\modules\launcher\Wox.Infrastructure\ -t:Restore /p:Platform=${{matrix.platform}}
+      run: msbuild src\modules\launcher\Wox.Infrastructure\ -t:Restore /p:Platform=${{matrix.platform}}
 
     - name: Build
-      run: msbuild PowerToys\src\modules\launcher\Wox.Infrastructure\ /p:Configuration=Release /p:Platform=${{matrix.platform}} /p:Version=${{env.PowerToys_Version}}
+      run: msbuild src\modules\launcher\Wox.Infrastructure\ /p:Configuration=Release /p:Platform=${{matrix.platform}} /p:Version=${{env.PowerToys_Version}}
+
+    - uses: actions/upload-artifact@v4
+      with:
+        name: WoxInfrastructure-${{matrix.platform}}
+        path: .\${{matrix.platform}}\Release\WoxInfrastructure\
+
+  push:
+
+    needs: build
+
+    runs-on: windows-latest
+
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        path: main
+
+    - uses: actions/download-artifact@v4
+      with:
+        name: WoxInfrastructure-x64
+        path: PowerToys\x64\Release\WoxInfrastructure\
+    - uses: actions/download-artifact@v4
+      with:
+        name: WoxInfrastructure-ARM64
+        path: PowerToys\ARM64\Release\WoxInfrastructure\
+    - name: Downloaded artifacts
+      run: ls -R PowerToys
+
+    - name: Setup dotnet
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
 
     - name: Pack
-      run: dotnet build main\Community.PowerToys.Run.Plugins.Dependencies.csproj -c Release /p:Version=${{env.PowerToys_Version}}
+      run: dotnet build main -c Release /p:Version=${{env.PowerToys_Version}}
 
-    # - name: NuGet Push
-    #   run: dotnet nuget push main\bin\Release\Community.PowerToys.Run.Plugins.Dependencies.*.nupkg --api-key "${{secrets.NUGET_APIKEY}}" --source https://api.nuget.org/v3/index.json --skip-duplicate
+    - name: NuGet Push
+      run: dotnet nuget push main\bin\Release\*.nupkg --api-key "${{secrets.NUGET_APIKEY}}" --source https://api.nuget.org/v3/index.json --skip-duplicate
