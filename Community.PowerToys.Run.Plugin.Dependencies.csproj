@@ -14,8 +14,8 @@ It contains the ARM64 and x64 versions of:
 - Wox.Infrastructure.dll
 - Wox.Plugin.dll
     </Description>
-    <PackageId>Community.PowerToys.Run.Plugins.Dependencies</PackageId>
-    <PackageProjectUrl>https://github.com/hlaueriksson/Community.PowerToys.Run.Plugins.Dependencies</PackageProjectUrl>
+    <PackageId>Community.PowerToys.Run.Plugin.Dependencies</PackageId>
+    <PackageProjectUrl>https://github.com/hlaueriksson/Community.PowerToys.Run.Plugin.Dependencies</PackageProjectUrl>
     <PackageIcon>icon.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageTags>plugin;plugins;powertoys;microsoft-powertoys;powertoys-run;powertoys-run-plugin</PackageTags>
@@ -28,7 +28,7 @@ It contains the ARM64 and x64 versions of:
   <ItemGroup>
     <None Include="icon.png" Pack="true" PackagePath="\" />
     <None Include="README.md" Pack="true" PackagePath="\" />
-    <None Include="Community.PowerToys.Run.Plugins.Dependencies.props" Pack="true" PackagePath="buildTransitive\Community.PowerToys.Run.Plugins.Dependencies.props" />
+    <None Include="Community.PowerToys.Run.Plugin.Dependencies.props" Pack="true" PackagePath="buildTransitive\Community.PowerToys.Run.Plugin.Dependencies.props" />
   </ItemGroup>
 
   <ItemGroup>

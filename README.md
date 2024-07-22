@@ -1,7 +1,7 @@
-# Community.PowerToys.Run.Plugins.Dependencies
+# Community.PowerToys.Run.Plugin.Dependencies
 
-[![package](https://github.com/hlaueriksson/Community.PowerToys.Run.Plugins.Dependencies/actions/workflows/package.yml/badge.svg)](https://github.com/hlaueriksson/Community.PowerToys.Run.Plugins.Dependencies/actions/workflows/package.yml)
-[![Community.PowerToys.Run.Plugins.Dependencies](https://img.shields.io/nuget/v/Community.PowerToys.Run.Plugins.Dependencies.svg?label=Community.PowerToys.Run.Plugins.Dependencies)](https://www.nuget.org/packages/Community.PowerToys.Run.Plugins.Dependencies)
+[![package](https://github.com/hlaueriksson/Community.PowerToys.Run.Plugin.Dependencies/actions/workflows/package.yml/badge.svg)](https://github.com/hlaueriksson/Community.PowerToys.Run.Plugin.Dependencies/actions/workflows/package.yml)
+[![Community.PowerToys.Run.Plugin.Dependencies](https://img.shields.io/nuget/v/Community.PowerToys.Run.Plugin.Dependencies.svg?label=Community.PowerToys.Run.Plugin.Dependencies)](https://www.nuget.org/packages/Community.PowerToys.Run.Plugin.Dependencies)
 
 This NuGet package simplifies referencing all PowerToys Run Plugin dependencies.
 
@@ -18,19 +18,19 @@ It contains the `ARM64` and `x64` versions of:
 .NET CLI:
 
 ```cmd
-dotnet add package Community.PowerToys.Run.Plugins.Dependencies
+dotnet add package Community.PowerToys.Run.Plugin.Dependencies
 ```
 
 Package Manager:
 
 ```cmd
-PM> NuGet\Install-Package Community.PowerToys.Run.Plugins.Dependencies
+PM> NuGet\Install-Package Community.PowerToys.Run.Plugin.Dependencies
 ```
 
 PackageReference:
 
 ```csproj
-<PackageReference Include="Community.PowerToys.Run.Plugins.Dependencies" Version="0.82.1" />
+<PackageReference Include="Community.PowerToys.Run.Plugin.Dependencies" Version="0.82.1" />
 ```
 
 ## Example
@@ -48,7 +48,7 @@ Example of a `.csproj` file:
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Community.PowerToys.Run.Plugins.Dependencies" Version="0.82.1" />
+    <PackageReference Include="Community.PowerToys.Run.Plugin.Dependencies" Version="0.82.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -67,4 +67,4 @@ Example of a `.csproj` file:
 
 This is not an official Microsoft PowerToys package.
 
-The DLLs are built from [source](https://github.com/microsoft/PowerToys) and pushed to [NuGet](https://www.nuget.org/packages/Community.PowerToys.Run.Plugins.Dependencies) with a GitHub Actions [workflow](https://github.com/hlaueriksson/Community.PowerToys.Run.Plugins.Dependencies/actions/workflows/package.yml).
+The DLLs are built from [source](https://github.com/microsoft/PowerToys) and pushed to [NuGet](https://www.nuget.org/packages/Community.PowerToys.Run.Plugin.Dependencies) with a GitHub Actions [workflow](https://github.com/hlaueriksson/Community.PowerToys.Run.Plugin.Dependencies/actions/workflows/package.yml).
