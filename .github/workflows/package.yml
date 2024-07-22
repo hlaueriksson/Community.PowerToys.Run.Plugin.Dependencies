@@ -1,0 +1,60 @@
+name: package
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  build:
+
+    runs-on: windows-latest
+
+    strategy:
+      matrix:
+        platform: [x64, ARM64]
+
+    steps:
+
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        path: main
+
+    - name: Checkout PowerToys
+      uses: actions/checkout@v4
+      with:
+        repository: microsoft/PowerToys
+        path: PowerToys
+        fetch-depth: 0
+
+    - name: Set version
+      run: echo ("PowerToys_Version=" + (git -C PowerToys describe --abbrev=0 --tags).substring(1)) >> $env:GITHUB_ENV
+
+    - name: Version
+      run: echo "${{env.PowerToys_Version}}"
+
+    - name: Setup dotnet
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+
+    - name: Setup msbuild
+      uses: microsoft/setup-msbuild@v2
+
+    - name: Restore dependencies
+      run: nuget restore PowerToys\PowerToys.sln
+
+    - name: Build version
+      run: msbuild PowerToys\src\common\version\
+
+    - name: Restore dependencies
+      run: msbuild PowerToys\src\modules\launcher\Wox.Infrastructure\ -t:Restore /p:Platform=${{matrix.platform}}
+
+    - name: Build
+      run: msbuild PowerToys\src\modules\launcher\Wox.Infrastructure\ /p:Configuration=Release /p:Platform=${{matrix.platform}} /p:Version=${{env.PowerToys_Version}}
+
+    - name: Pack
+      run: dotnet build main\Community.PowerToys.Run.Plugins.Dependencies.csproj -c Release /p:Version=${{env.PowerToys_Version}}
+
+    # - name: NuGet Push
+    #   run: dotnet nuget push main\bin\Release\Community.PowerToys.Run.Plugins.Dependencies.*.nupkg --api-key "${{secrets.NUGET_APIKEY}}" --source https://api.nuget.org/v3/index.json --skip-duplicate

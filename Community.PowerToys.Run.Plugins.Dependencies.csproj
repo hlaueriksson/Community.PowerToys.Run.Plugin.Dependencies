@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Version>$(Version).0</Version>
+    <Authors>Henrik Lau Eriksson</Authors>
+    <Description>This NuGet package simplifies referencing all PowerToys Run Plugin dependencies.
+
+It contains the ARM64 and x64 versions of:
+
+- PowerToys.Common.UI.dll
+- PowerToys.ManagedCommon.dll
+- PowerToys.Settings.UI.Lib.dll
+- Wox.Infrastructure.dll
+- Wox.Plugin.dll
+    </Description>
+    <PackageId>Community.PowerToys.Run.Plugins.Dependencies</PackageId>
+    <PackageProjectUrl>https://github.com/hlaueriksson/Community.PowerToys.Run.Plugins.Dependencies</PackageProjectUrl>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>plugin;plugins;powertoys;microsoft-powertoys;powertoys-run;powertoys-run-plugin</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="icon.png" Pack="true" PackagePath="\" />
+    <None Include="README.md" Pack="true" PackagePath="\" />
+    <None Include="Community.PowerToys.Run.Plugins.Dependencies.props" Pack="true" PackagePath="buildTransitive\Community.PowerToys.Run.Plugins.Dependencies.props" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\PowerToys\ARM64\Release\WoxInfrastructure\PowerToys.Common.UI.dll" Pack="true" PackagePath="tools\ARM64" />
+    <None Include="..\PowerToys\ARM64\Release\WoxInfrastructure\PowerToys.ManagedCommon.dll" Pack="true" PackagePath="tools\ARM64" />
+    <None Include="..\PowerToys\ARM64\Release\WoxInfrastructure\PowerToys.Settings.UI.Lib.dll" Pack="true" PackagePath="tools\ARM64" />
+    <None Include="..\PowerToys\ARM64\Release\WoxInfrastructure\Wox.Infrastructure.dll" Pack="true" PackagePath="tools\ARM64" />
+    <None Include="..\PowerToys\ARM64\Release\WoxInfrastructure\Wox.Plugin.dll" Pack="true" PackagePath="tools\ARM64" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\PowerToys\x64\Release\WoxInfrastructure\PowerToys.Common.UI.dll" Pack="true" PackagePath="tools\x64" />
+    <None Include="..\PowerToys\x64\Release\WoxInfrastructure\PowerToys.ManagedCommon.dll" Pack="true" PackagePath="tools\x64" />
+    <None Include="..\PowerToys\x64\Release\WoxInfrastructure\PowerToys.Settings.UI.Lib.dll" Pack="true" PackagePath="tools\x64" />
+    <None Include="..\PowerToys\x64\Release\WoxInfrastructure\Wox.Infrastructure.dll" Pack="true" PackagePath="tools\x64" />
+    <None Include="..\PowerToys\x64\Release\WoxInfrastructure\Wox.Plugin.dll" Pack="true" PackagePath="tools\x64" />
+  </ItemGroup>
+
+</Project>
