@@ -32,19 +32,21 @@ It contains the ARM64 and x64 versions of:
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\PowerToys\ARM64\Release\WoxInfrastructure\PowerToys.Common.UI.dll" Pack="true" PackagePath="tools\ARM64" />
-    <None Include="..\PowerToys\ARM64\Release\WoxInfrastructure\PowerToys.ManagedCommon.dll" Pack="true" PackagePath="tools\ARM64" />
-    <None Include="..\PowerToys\ARM64\Release\WoxInfrastructure\PowerToys.Settings.UI.Lib.dll" Pack="true" PackagePath="tools\ARM64" />
+    <None Include="..\PowerToys\ARM64\Release\WoxInfrastructure\PowerToys.Common.UI.*" Pack="true" PackagePath="tools\ARM64" />
+    <None Include="..\PowerToys\ARM64\Release\WoxInfrastructure\PowerToys.ManagedCommon.*" Pack="true" PackagePath="tools\ARM64" />
+    <None Include="..\PowerToys\ARM64\Release\WoxInfrastructure\PowerToys.Settings.UI.Lib.*" Pack="true" PackagePath="tools\ARM64" />
     <None Include="..\PowerToys\ARM64\Release\WoxInfrastructure\Wox.Infrastructure.dll" Pack="true" PackagePath="tools\ARM64" />
-    <None Include="..\PowerToys\ARM64\Release\WoxInfrastructure\Wox.Plugin.dll" Pack="true" PackagePath="tools\ARM64" />
+    <None Include="..\PowerToys\ARM64\Release\WoxInfrastructure\Wox.Infrastructure.pdb" Pack="true" PackagePath="tools\ARM64" />
+    <None Include="..\PowerToys\ARM64\Release\WoxInfrastructure\Wox.Plugin.*" Pack="true" PackagePath="tools\ARM64" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\PowerToys\x64\Release\WoxInfrastructure\PowerToys.Common.UI.dll" Pack="true" PackagePath="tools\x64" />
-    <None Include="..\PowerToys\x64\Release\WoxInfrastructure\PowerToys.ManagedCommon.dll" Pack="true" PackagePath="tools\x64" />
-    <None Include="..\PowerToys\x64\Release\WoxInfrastructure\PowerToys.Settings.UI.Lib.dll" Pack="true" PackagePath="tools\x64" />
+    <None Include="..\PowerToys\x64\Release\WoxInfrastructure\PowerToys.Common.UI.*" Pack="true" PackagePath="tools\x64" />
+    <None Include="..\PowerToys\x64\Release\WoxInfrastructure\PowerToys.ManagedCommon.*" Pack="true" PackagePath="tools\x64" />
+    <None Include="..\PowerToys\x64\Release\WoxInfrastructure\PowerToys.Settings.UI.Lib.*" Pack="true" PackagePath="tools\x64" />
     <None Include="..\PowerToys\x64\Release\WoxInfrastructure\Wox.Infrastructure.dll" Pack="true" PackagePath="tools\x64" />
-    <None Include="..\PowerToys\x64\Release\WoxInfrastructure\Wox.Plugin.dll" Pack="true" PackagePath="tools\x64" />
+    <None Include="..\PowerToys\x64\Release\WoxInfrastructure\Wox.Infrastructure.pdb" Pack="true" PackagePath="tools\x64" />
+    <None Include="..\PowerToys\x64\Release\WoxInfrastructure\Wox.Plugin.*" Pack="true" PackagePath="tools\x64" />
   </ItemGroup>
 
 </Project>
