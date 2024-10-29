@@ -91,10 +91,5 @@ jobs:
     - name: Pack
       run: dotnet build main -c Release /p:Version=${{needs.build.outputs.PowerToys_Version}}
 
-    - uses: actions/upload-artifact@v4
-      with:
-        name: Package
-        path: main\bin\Release\*.nupkg
-
-    # - name: NuGet Push
-    #   run: dotnet nuget push main\bin\Release\*.nupkg --api-key "${{secrets.NUGET_APIKEY}}" --source https://api.nuget.org/v3/index.json --skip-duplicate
+    - name: NuGet Push
+      run: dotnet nuget push main\bin\Release\*.nupkg --api-key "${{secrets.NUGET_APIKEY}}" --source https://api.nuget.org/v3/index.json --skip-duplicate
