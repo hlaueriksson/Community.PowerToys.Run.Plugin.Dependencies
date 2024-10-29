@@ -23,6 +23,7 @@ It contains the ARM64 and x64 versions of:
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <IncludeBuildOutput>false</IncludeBuildOutput>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <NoWarn>NU5128</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
