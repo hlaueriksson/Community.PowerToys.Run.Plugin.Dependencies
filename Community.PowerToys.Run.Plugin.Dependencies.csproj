@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0-windows</TargetFramework>
-    <Version>$(Version).0</Version>
+    <Version>$(Version)</Version>
     <Authors>Henrik Lau Eriksson</Authors>
     <Description>This NuGet package simplifies referencing all PowerToys Run Plugin dependencies.
 
