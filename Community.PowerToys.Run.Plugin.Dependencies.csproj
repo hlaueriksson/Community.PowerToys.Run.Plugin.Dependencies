@@ -26,6 +26,10 @@ It contains the ARM64 and x64 versions of:
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="All"/>
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="icon.png" Pack="true" PackagePath="\" />
     <None Include="README.md" Pack="true" PackagePath="\" />
     <None Include="Community.PowerToys.Run.Plugin.Dependencies.props" Pack="true" PackagePath="buildTransitive\Community.PowerToys.Run.Plugin.Dependencies.props" />
