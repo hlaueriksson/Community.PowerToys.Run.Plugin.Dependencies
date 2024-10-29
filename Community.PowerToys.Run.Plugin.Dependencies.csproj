@@ -37,21 +37,21 @@ It contains the ARM64 and x64 versions of:
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\PowerToys\ARM64\Release\WoxInfrastructure\PowerToys.Common.UI.*" Pack="true" PackagePath="runtimes\win-arm64\native" />
-    <None Include="..\PowerToys\ARM64\Release\WoxInfrastructure\PowerToys.ManagedCommon.*" Pack="true" PackagePath="runtimes\win-arm64\native" />
-    <None Include="..\PowerToys\ARM64\Release\WoxInfrastructure\PowerToys.Settings.UI.Lib.*" Pack="true" PackagePath="runtimes\win-arm64\native" />
-    <None Include="..\PowerToys\ARM64\Release\WoxInfrastructure\Wox.Infrastructure.dll" Pack="true" PackagePath="runtimes\win-arm64\native" />
-    <None Include="..\PowerToys\ARM64\Release\WoxInfrastructure\Wox.Infrastructure.pdb" Pack="true" PackagePath="runtimes\win-arm64\native" />
-    <None Include="..\PowerToys\ARM64\Release\WoxInfrastructure\Wox.Plugin.*" Pack="true" PackagePath="runtimes\win-arm64\native" />
+    <None Include="..\PowerToys\ARM64\Release\WoxInfrastructure\PowerToys.Common.UI.*" Pack="true" PackagePath="runtimes\win-arm64\lib\net8.0" />
+    <None Include="..\PowerToys\ARM64\Release\WoxInfrastructure\PowerToys.ManagedCommon.*" Pack="true" PackagePath="runtimes\win-arm64\lib\net8.0" />
+    <None Include="..\PowerToys\ARM64\Release\WoxInfrastructure\PowerToys.Settings.UI.Lib.*" Pack="true" PackagePath="runtimes\win-arm64\lib\net8.0" />
+    <None Include="..\PowerToys\ARM64\Release\WoxInfrastructure\Wox.Infrastructure.dll" Pack="true" PackagePath="runtimes\win-arm64\lib\net8.0" />
+    <None Include="..\PowerToys\ARM64\Release\WoxInfrastructure\Wox.Infrastructure.pdb" Pack="true" PackagePath="runtimes\win-arm64\lib\net8.0" />
+    <None Include="..\PowerToys\ARM64\Release\WoxInfrastructure\Wox.Plugin.*" Pack="true" PackagePath="runtimes\win-arm64\lib\net8.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\PowerToys\x64\Release\WoxInfrastructure\PowerToys.Common.UI.*" Pack="true" PackagePath="runtimes\win-x64\native" />
-    <None Include="..\PowerToys\x64\Release\WoxInfrastructure\PowerToys.ManagedCommon.*" Pack="true" PackagePath="runtimes\win-x64\native" />
-    <None Include="..\PowerToys\x64\Release\WoxInfrastructure\PowerToys.Settings.UI.Lib.*" Pack="true" PackagePath="runtimes\win-x64\native" />
-    <None Include="..\PowerToys\x64\Release\WoxInfrastructure\Wox.Infrastructure.dll" Pack="true" PackagePath="runtimes\win-x64\native" />
-    <None Include="..\PowerToys\x64\Release\WoxInfrastructure\Wox.Infrastructure.pdb" Pack="true" PackagePath="runtimes\win-x64\native" />
-    <None Include="..\PowerToys\x64\Release\WoxInfrastructure\Wox.Plugin.*" Pack="true" PackagePath="runtimes\win-x64\native" />
+    <None Include="..\PowerToys\x64\Release\WoxInfrastructure\PowerToys.Common.UI.*" Pack="true" PackagePath="runtimes\win-x64\lib\net8.0" />
+    <None Include="..\PowerToys\x64\Release\WoxInfrastructure\PowerToys.ManagedCommon.*" Pack="true" PackagePath="runtimes\win-x64\lib\net8.0" />
+    <None Include="..\PowerToys\x64\Release\WoxInfrastructure\PowerToys.Settings.UI.Lib.*" Pack="true" PackagePath="runtimes\win-x64\lib\net8.0" />
+    <None Include="..\PowerToys\x64\Release\WoxInfrastructure\Wox.Infrastructure.dll" Pack="true" PackagePath="runtimes\win-x64\lib\net8.0" />
+    <None Include="..\PowerToys\x64\Release\WoxInfrastructure\Wox.Infrastructure.pdb" Pack="true" PackagePath="runtimes\win-x64\lib\net8.0" />
+    <None Include="..\PowerToys\x64\Release\WoxInfrastructure\Wox.Plugin.*" Pack="true" PackagePath="runtimes\win-x64\lib\net8.0" />
   </ItemGroup>
 
 </Project>
