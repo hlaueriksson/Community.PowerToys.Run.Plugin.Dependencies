@@ -34,7 +34,7 @@ jobs:
     - name: Setup dotnet
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 8.0.x
+        dotnet-version: 9.0.x
 
     - name: Setup msbuild
       uses: microsoft/setup-msbuild@v2
@@ -86,7 +86,7 @@ jobs:
     - name: Setup dotnet
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 8.0.x
+        dotnet-version: 9.0.x
 
     - name: Pack
       run: dotnet build main -c Release /p:Version=${{needs.build.outputs.PowerToys_Version}}

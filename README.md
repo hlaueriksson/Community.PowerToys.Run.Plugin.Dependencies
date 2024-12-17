@@ -30,7 +30,7 @@ PM> NuGet\Install-Package Community.PowerToys.Run.Plugin.Dependencies
 PackageReference:
 
 ```csproj
-<PackageReference Include="Community.PowerToys.Run.Plugin.Dependencies" Version="0.86.0" />
+<PackageReference Include="Community.PowerToys.Run.Plugin.Dependencies" Version="0.87.0" />
 ```
 
 ## Example
@@ -41,14 +41,14 @@ Example of a `.csproj` file:
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0-windows10.0.22621.0</TargetFramework>
+    <TargetFramework>net9.0-windows10.0.22621.0</TargetFramework>
     <UseWPF>true</UseWPF>
     <Platforms>x64;ARM64</Platforms>
     <PlatformTarget>$(Platform)</PlatformTarget>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Community.PowerToys.Run.Plugin.Dependencies" Version="0.86.0" />
+    <PackageReference Include="Community.PowerToys.Run.Plugin.Dependencies" Version="0.87.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -66,7 +66,7 @@ Example of a `.csproj` file:
 Use these properties:
 
 ```
-<TargetFramework>net8.0-windows10.0.22621.0</TargetFramework>
+<TargetFramework>net9.0-windows10.0.22621.0</TargetFramework>
 ```
 
 - The target framework for the official plugins is defined in [Common.Dotnet.CsWinRT.props](https://github.com/microsoft/PowerToys/blob/main/src/Common.Dotnet.CsWinRT.props)

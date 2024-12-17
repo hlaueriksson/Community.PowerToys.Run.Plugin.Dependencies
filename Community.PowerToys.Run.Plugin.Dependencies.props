@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Condition="'$(Platform)' == 'ARM64'">
-    <Reference Include="PowerToys.Common.UI.dll" HintPath="$(MSBuildThisFileDirectory)..\runtimes\win-arm64\lib\net8.0\PowerToys.Common.UI.dll" />
-    <Reference Include="PowerToys.ManagedCommon.dll" HintPath="$(MSBuildThisFileDirectory)..\runtimes\win-arm64\lib\net8.0\PowerToys.ManagedCommon.dll" />
-    <Reference Include="PowerToys.Settings.UI.Lib.dll" HintPath="$(MSBuildThisFileDirectory)..\runtimes\win-arm64\lib\net8.0\PowerToys.Settings.UI.Lib.dll" />
-    <Reference Include="Wox.Infrastructure.dll" HintPath="$(MSBuildThisFileDirectory)..\runtimes\win-arm64\lib\net8.0\Wox.Infrastructure.dll" />
-    <Reference Include="Wox.Plugin.dll" HintPath="$(MSBuildThisFileDirectory)..\runtimes\win-arm64\lib\net8.0\Wox.Plugin.dll" />
+    <Reference Include="PowerToys.Common.UI.dll" HintPath="$(MSBuildThisFileDirectory)..\runtimes\win-arm64\lib\net9.0\PowerToys.Common.UI.dll" />
+    <Reference Include="PowerToys.ManagedCommon.dll" HintPath="$(MSBuildThisFileDirectory)..\runtimes\win-arm64\lib\net9.0\PowerToys.ManagedCommon.dll" />
+    <Reference Include="PowerToys.Settings.UI.Lib.dll" HintPath="$(MSBuildThisFileDirectory)..\runtimes\win-arm64\lib\net9.0\PowerToys.Settings.UI.Lib.dll" />
+    <Reference Include="Wox.Infrastructure.dll" HintPath="$(MSBuildThisFileDirectory)..\runtimes\win-arm64\lib\net9.0\Wox.Infrastructure.dll" />
+    <Reference Include="Wox.Plugin.dll" HintPath="$(MSBuildThisFileDirectory)..\runtimes\win-arm64\lib\net9.0\Wox.Plugin.dll" />
   </ItemGroup>
   <ItemGroup Condition="'$(Platform)' == 'x64' or '$(Platform)' == 'AnyCPU'">
-    <Reference Include="PowerToys.Common.UI.dll" HintPath="$(MSBuildThisFileDirectory)..\runtimes\win-x64\lib\net8.0\PowerToys.Common.UI.dll" />
-    <Reference Include="PowerToys.ManagedCommon.dll" HintPath="$(MSBuildThisFileDirectory)..\runtimes\win-x64\lib\net8.0\PowerToys.ManagedCommon.dll" />
-    <Reference Include="PowerToys.Settings.UI.Lib.dll" HintPath="$(MSBuildThisFileDirectory)..\runtimes\win-x64\lib\net8.0\PowerToys.Settings.UI.Lib.dll" />
-    <Reference Include="Wox.Infrastructure.dll" HintPath="$(MSBuildThisFileDirectory)..\runtimes\win-x64\lib\net8.0\Wox.Infrastructure.dll" />
-    <Reference Include="Wox.Plugin.dll" HintPath="$(MSBuildThisFileDirectory)..\runtimes\win-x64\lib\net8.0\Wox.Plugin.dll" />
+    <Reference Include="PowerToys.Common.UI.dll" HintPath="$(MSBuildThisFileDirectory)..\runtimes\win-x64\lib\net9.0\PowerToys.Common.UI.dll" />
+    <Reference Include="PowerToys.ManagedCommon.dll" HintPath="$(MSBuildThisFileDirectory)..\runtimes\win-x64\lib\net9.0\PowerToys.ManagedCommon.dll" />
+    <Reference Include="PowerToys.Settings.UI.Lib.dll" HintPath="$(MSBuildThisFileDirectory)..\runtimes\win-x64\lib\net9.0\PowerToys.Settings.UI.Lib.dll" />
+    <Reference Include="Wox.Infrastructure.dll" HintPath="$(MSBuildThisFileDirectory)..\runtimes\win-x64\lib\net9.0\Wox.Infrastructure.dll" />
+    <Reference Include="Wox.Plugin.dll" HintPath="$(MSBuildThisFileDirectory)..\runtimes\win-x64\lib\net9.0\Wox.Plugin.dll" />
   </ItemGroup>
 </Project>
