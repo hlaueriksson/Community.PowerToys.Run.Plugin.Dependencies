@@ -30,7 +30,7 @@ PM> NuGet\Install-Package Community.PowerToys.Run.Plugin.Dependencies
 PackageReference:
 
 ```csproj
-<PackageReference Include="Community.PowerToys.Run.Plugin.Dependencies" Version="0.86.0" />
+<PackageReference Include="Community.PowerToys.Run.Plugin.Dependencies" Version="0.87.0" />
 ```
 
 ## Example
@@ -48,7 +48,7 @@ Example of a `.csproj` file:
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Community.PowerToys.Run.Plugin.Dependencies" Version="0.86.0" />
+    <PackageReference Include="Community.PowerToys.Run.Plugin.Dependencies" Version="0.87.0" />
   </ItemGroup>
 
   <ItemGroup>
