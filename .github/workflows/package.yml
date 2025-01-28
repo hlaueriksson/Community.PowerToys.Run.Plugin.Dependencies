@@ -24,6 +24,9 @@ jobs:
         repository: microsoft/PowerToys
         fetch-depth: 0
 
+    - name: Checkout submodules
+      run: git submodule update --init --recursive
+
     - name: Set version
       run: echo ("PowerToys_Version=" + (git describe --abbrev=0 --tags).substring(1)) >> $env:GITHUB_ENV
 
