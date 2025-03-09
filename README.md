@@ -2,6 +2,7 @@
 
 [![package](https://github.com/hlaueriksson/Community.PowerToys.Run.Plugin.Dependencies/actions/workflows/package.yml/badge.svg)](https://github.com/hlaueriksson/Community.PowerToys.Run.Plugin.Dependencies/actions/workflows/package.yml)
 [![Community.PowerToys.Run.Plugin.Dependencies](https://img.shields.io/nuget/v/Community.PowerToys.Run.Plugin.Dependencies.svg?label=Community.PowerToys.Run.Plugin.Dependencies)](https://www.nuget.org/packages/Community.PowerToys.Run.Plugin.Dependencies)
+[![Mentioned in Awesome PowerToys Run Plugins](https://awesome.re/mentioned-badge.svg)](https://github.com/hlaueriksson/awesome-powertoys-run-plugins)
 
 This NuGet package simplifies referencing all PowerToys Run Plugin dependencies.
 
