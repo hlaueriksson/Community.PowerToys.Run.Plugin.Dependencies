@@ -47,7 +47,7 @@ jobs:
       uses: microsoft/setup-msbuild@v2
 
     - name: Restore dependencies
-      run: nuget restore PowerToys.sln
+      run: nuget restore PowerToys.slnx
 
     - name: Build version
       run: msbuild src\common\version\
